@@ -4,7 +4,9 @@
         <meta charset = "UTF-8">
         <title>Exercice de lecture</title>
         <link rel="stylesheet" href="../css/cssMin.css">
-        <script src="../JS/js.js"></script> 
+        <script type="text/javascript" src="../js/lire.js" defer></script>
+        <script type="text/javascript" src="../js/js.js" defer></script>
+        
     </head>
 
     <body>
@@ -23,24 +25,30 @@
 
         <div class="main">
             <h1 class="titreMain">Exercice 1</h1>
-            <p class="p1Main">
-                Cherche l'intrus dans cette liste de synonymes du nom  "bruit".
+            <p id="question">
+                template question.
             </p>
                 <form action="../php/verifExo.php" method="post">
+
                 <div class="radioMain">
-                    <input type="radio" id="murmure" name="drone" value="murmure"
+                    <input type="radio" id="a1" name="drone"
                         checked>
-                    <label for="murmure">murmure</label>
+                    <label for="a1" id="poss1">template answer</label>
                 </div>
                 
                 <div class="radioMain">
-                    <input type="radio" id="vacarme" name="drone" value="vacarme">
-                    <label for="vacarme">vacarme</label>
+                    <input type="radio" id="a2" name="drone">
+                    <label for="a2" id="poss2">template answer</label>
                 </div>
                 
                 <div class="radioMain">
-                    <input type="radio" id="vacances" name="drone" value="vacances">
-                    <label for="vacances">vacances</label>
+                    <input type="radio" id="a3" name="drone">
+                    <label for="a3" id="poss3">template answer</label>
+                </div>
+
+                <div class="radioMain">
+                    <input type="radio" id="a4" name="drone"    >
+                    <label for="a4" id="poss4">template answer</label>
                 </div>
                 <input type="button" onclick="isTrue()" class="boutonVerif" value="Vérifier"></button> 
                 <p id="reponse" class="p2Main"></br></p>
