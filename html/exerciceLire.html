@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset = "UTF-8">
+        <title>Exercice de lecture</title>
+        <link rel="stylesheet" href="../css/cssMin.css">
+        <script src="../JS/js.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar">
+            <a class="title" href="../index.html" > Notre site web </a>
+            
+            <div class="spacer"></div>
+
+            <button class="btn-accueil" type="button"> Accueil</button>
+            <button class="btn-lire" type="button"> Lire</button>
+            <button class="btn-ecrire" type="button"> Ecrire</button>
+            <button class="btn-compter" type="button"> Compter</button>
+
+        </div>
+
+        <div class="main">
+            <h1 class="titreMain">Exercice 1</h1>
+            <p class="p1Main">
+                Cherche l'intrus dans cette liste de synonymes du nom  "bruit".
+            </p>
+                <form action="../php/verifExo.php" method="post">
+                <div class="radioMain">
+                    <input type="radio" id="murmure" name="drone" value="murmure"
+                        checked>
+                    <label for="murmure">murmure</label>
+                </div>
+                
+                <div class="radioMain">
+                    <input type="radio" id="vacarme" name="drone" value="vacarme">
+                    <label for="vacarme">vacarme</label>
+                </div>
+                
+                <div class="radioMain">
+                    <input type="radio" id="vacances" name="drone" value="vacances">
+                    <label for="vacances">vacances</label>
+                </div>
+                <input type="button" onclick="isTrue()" class="boutonVerif" value="Vérifier"></button> 
+                <p id="reponse" class="p2Main"></br></p>
+            </div>
+        </form>
+    </body>
+</DOCTYPE>
