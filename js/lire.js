@@ -41,6 +41,11 @@ let lireData = {
                 "phrase": "Il n'a pas ....... bonjour",
                 "verbe": "dire",
                 "reponse": "dit"
+            },
+            {
+                "type":"QAS",
+                "question": "5 * 2",
+                "reponse": "10"
             }
         ],
     }
