@@ -26,15 +26,15 @@ let lireData = {
             },
             {
                 "type":"PAT",
-                "phrase": "J'ai ....... ta mère",
-                "verbe": "Manger",
-                "reponse": "Mangé"
+                "nb" : "5",
+                "tab" : ["J'ai ", "VIDE", " (Manger) ta mère, c'était", "VIDE", "(Manger)"],
+                "reponse": ["mangé", "bon"]
             },
             {
                 "type":"PAT",
-                "phrase": "Il n'a pas ....... bonjour",
-                "verbe": "dire",
-                "reponse": "dit"
+                "nb" : "3",
+                "tab" : ["Il n'a pas ", "VIDE", "bonjour. (dire)"],
+                "reponse": ["dit"]
             },
             {
                 "type":"QAS",

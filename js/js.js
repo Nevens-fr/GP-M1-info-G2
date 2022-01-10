@@ -5,6 +5,50 @@ var qcmPossibilites = [];
 var qcmChecked= []
 var nbPoss;
 
+var inputPAT = [];
+var nbInputPAT;
+var reponsePAT = [];
+
+
+/* Traitement des questions de type phrase à trou
+*/
+function isTruePAT(){
+
+    var vrai = false;
+    var vrais = [];
+
+    for(var i =0; i < nbInputPAT; i++){
+        
+        if(document.getElementById("idTextPAT" + i).value == reponsePAT[i]){
+            vrais.push(true);
+        }
+        else{
+            vrais.push(false);
+        }
+    }
+
+    for(var i = 0; i < nbInputPAT; i++){
+        if(vrais[i]){
+            vrai = true;
+        }
+        else{
+            vrai = false
+        }
+    }
+
+    if(vrai){
+        document.getElementById("reponsePAT").innerHTML = "Bonne réponse </br>";
+    }
+    else{
+        if(correctionActuelle != null){
+            document.getElementById("reponsePAT").innerHTML = "Mauvaise réponse </br>" + correctionActuelle;
+        }
+        else{
+            document.getElementById("reponsePAT").innerHTML = "Mauvaise réponse </br>";
+        }
+    }
+}
+
 /* Traitement des questions de type question avec saisie
 */
 function isTrueQAS(){
@@ -77,7 +121,7 @@ function recupQuestionFacile(data){
 
             qcmPossibilites.push(label);
 
-            var currentDiv = document.getElementById('reponseQCM');
+            var currentDiv = document.getElementById('boutonQCM');
             document.getElementById('QCM').insertBefore(div, currentDiv);
         }
         
@@ -112,8 +156,35 @@ function recupQuestionFacile(data){
         document.getElementById("PAT").style.display = 'none';
     }
     else if(questionActuelle.type == "PAT"){//Question phrase a trou
-        document.getElementById("questionQAS").innerHTML = questionActuelle.question;
-        reponseActuelle = questionActuelle.reponse;
+        document.getElementById("questionPAT").style.display = 'none';
+        reponsePAT = questionActuelle.reponse;
+
+        var nb = Number(questionActuelle.nb);
+
+        nbInputPAT = 0;
+
+        for(var i = 0; i < nb; i++){
+
+            var elem;
+
+            if (questionActuelle.tab[i] == "VIDE"){
+                elem = document.createElement('input');
+                elem.classList.add('p1Main');
+                elem.setAttribute('type', "text");
+                elem.setAttribute('class', "textQAS");
+                elem.setAttribute('id', "idTextPAT" + nbInputPAT);
+                nbInputPAT += 1;
+                inputPAT.push(elem);
+            }
+            else{
+                elem = document.createElement('p');
+                elem.innerHTML = questionActuelle.tab[i];
+                elem.setAttribute('class', "textQAS");
+            }
+
+            var prev = document.getElementById("boutonPAT");
+            document.getElementById('PAT').insertBefore(elem, prev);
+        }
 
         try{
             correctionActuelle = questionActuelle.correction;

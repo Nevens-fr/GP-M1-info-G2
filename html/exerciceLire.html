@@ -40,15 +40,13 @@
         <!--Affichage d'un div pour un exercice de type phrase à trou-->
         <div class="main" id="PAT">
             <h1 class="titreMain">Exercice</h1>
-            <p id="questionQAS" class="p1Main">
+            <p id="questionPAT" class="p1Main">
                 template question.
             </p>
 
-            <input type="text" class="textQAS" id="idTextQAS">
 
-
-            <input type="button" onclick="isTruePAT()" class="boutonVerif" value="Vérifier"></button> 
-            <p id="reponseQAS" class="p2Main"></br></p>
+            <input type="button" id="boutonPAT" onclick="isTruePAT()" class="boutonVerif" value="Vérifier"></button> 
+            <p id="reponsePAT" class="p2Main"></br></p>
         </div>
         
         <!--Affichage d'un div pour un exercice de type QCM-->
@@ -57,8 +55,8 @@
             <p id="questionQCM" class="p1Main">
                 template question.
             </p>
-            <p id="reponseQCM" class="p2Main"></br></p>
             <input type="button" id="boutonQCM" onclick="isTrueQCM()" class="boutonVerif" value="Vérifier"></button> 
+            <p id="reponseQCM" class="p2Main"></br></p>
         </div>
     </body>
 </DOCTYPE>
