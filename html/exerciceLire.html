@@ -36,6 +36,20 @@
             <input type="button" onclick="isTrueQAS()" class="boutonVerif" value="Vérifier"></button> 
             <p id="reponseQAS" class="p2Main"></br></p>
         </div>
+
+        <!--Affichage d'un div pour un exercice de type phrase à trou-->
+        <div class="main" id="PAT">
+            <h1 class="titreMain">Exercice</h1>
+            <p id="questionQAS" class="p1Main">
+                template question.
+            </p>
+
+            <input type="text" class="textQAS" id="idTextQAS">
+
+
+            <input type="button" onclick="isTruePAT()" class="boutonVerif" value="Vérifier"></button> 
+            <p id="reponseQAS" class="p2Main"></br></p>
+        </div>
         
         <!--Affichage d'un div pour un exercice de type QCM-->
         <div class="main" id="QCM">
@@ -43,29 +57,8 @@
             <p id="questionQCM" class="p1Main">
                 template question.
             </p>
-
-            <div class="radioMain">
-                <input type="radio" id="a1" name="drone"
-                    checked>
-                <label for="a1" id="poss1">template answer</label>
-            </div>
-                
-            <div class="radioMain">
-                <input type="radio" id="a2" name="drone">
-                <label for="a2" id="poss2">template answer</label>
-            </div>
-                
-            <div class="radioMain">
-                <input type="radio" id="a3" name="drone">
-                <label for="a3" id="poss3">template answer</label>
-            </div>
-
-            <div class="radioMain">
-                <input type="radio" id="a4" name="drone"    >
-                <label for="a4" id="poss4">template answer</label>
-            </div>
-            <input type="button" onclick="isTrueQCM()" class="boutonVerif" value="Vérifier"></button> 
             <p id="reponseQCM" class="p2Main"></br></p>
+            <input type="button" id="boutonQCM" onclick="isTrueQCM()" class="boutonVerif" value="Vérifier"></button> 
         </div>
     </body>
 </DOCTYPE>

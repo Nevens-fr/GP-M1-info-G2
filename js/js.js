@@ -1,9 +1,11 @@
 var questionActuelle;
 var reponseActuelle;
 var correctionActuelle = null;
+var qcmPossibilites = [];
+var qcmChecked= []
+var nbPoss;
 
 /* Traitement des questions de type question avec saisie
-Ajouter en paramètre la bonne réponse 
 */
 function isTrueQAS(){
     if (document.getElementById("idTextQAS").value == reponseActuelle){
@@ -20,27 +22,24 @@ function isTrueQAS(){
 }
 
 /* Traitement des questions de type QCM
-Ajouter en paramètre la bonne réponse
 */
 function isTrueQCM(){
+    var vrai = false;
 
-    if(document.getElementById("a1").checked == true && document.getElementById("poss1").innerText === questionActuelle.reponse){
-        document.getElementById("reponseQCM").innerHTML = "Bonne réponse </br>";
+    for(var i = 0; i < nbPoss; i++){
+        if(qcmChecked[i].checked == true && qcmPossibilites[i].innerHTML == reponseActuelle){
+            vrai = true;
+        }
     }
-    else if(document.getElementById("a2").checked == true && document.getElementById("poss2").innerText === questionActuelle.reponse){
-        document.getElementById("reponseQCM").innerHTML = "Bonne réponse </br>";
-    }
-    else if(document.getElementById("a3").checked == true && document.getElementById("poss3").innerText === questionActuelle.reponse){
-        document.getElementById("reponseQCM").innerHTML = "Bonne réponse </br>";
-    }
-    else if(document.getElementById("a4").checked == true && document.getElementById("poss4").innerText === questionActuelle.reponse){
+
+    if(vrai){
         document.getElementById("reponseQCM").innerHTML = "Bonne réponse </br>";
     }
     else{
-        try{
+        if(correctionActuelle != null){
             document.getElementById("reponseQCM").innerHTML = "Mauvaise réponse </br>" + questionActuelle.correction + "</br>";
         }
-        catch{
+        else{
             document.getElementById("reponseQCM").innerHTML = "Mauvaise réponse </br>";
         }
     }
@@ -53,14 +52,38 @@ function recupQuestionFacile(data){
 
     questionActuelle = data.facile[Math.floor(Math.random()*data.facile.length)];
 
-    if(questionActuelle.type == "QCM"){
+    if(questionActuelle.type == "QCM"){//question de type QCM
+
+        var nbposs = Number(questionActuelle.nbPoss);
+
+        var i = 0;
+        //Création dynamique des éléments
+        for( ; i < nbposs; i++){
+            let div = document.createElement('div');
+            div.classList.add('radioMain');
+
+            let input = document.createElement('input');
+            input.setAttribute("type", "radio")
+            input.setAttribute("name", "drone")
+            qcmChecked.push(input);
+
+            div.appendChild(input);
+
+            let label = document.createElement('label');
+            label.setAttribute('value', questionActuelle.possibilite[i]);
+            label.innerHTML = questionActuelle.possibilite[i];
+
+            div.appendChild(label);
+
+            qcmPossibilites.push(label);
+
+            var currentDiv = document.getElementById('reponseQCM');
+            document.getElementById('QCM').insertBefore(div, currentDiv);
+        }
         
         document.getElementById("questionQCM").innerHTML = questionActuelle.question;
-        document.getElementById("poss1").innerText= questionActuelle.possibilite1;
-        document.getElementById("poss2").innerText = questionActuelle.possibilite2;
-        document.getElementById("poss3").innerText = questionActuelle.possibilite3;
-        document.getElementById("poss4").innerText = questionActuelle.possibilite4;
         reponseActuelle = questionActuelle.reponse;
+        nbPoss = nbposs;
 
         try{
             correctionActuelle = questionActuelle.correction;
@@ -71,8 +94,9 @@ function recupQuestionFacile(data){
 
         document.getElementById("QAS").style.display = 'none';
         document.getElementById("QCM").style.display = 'block';
+        document.getElementById("PAT").style.display = 'none';
     }
-    else if(questionActuelle.type == "QAS"){
+    else if(questionActuelle.type == "QAS"){//question avec saisie
         document.getElementById("questionQAS").innerHTML = questionActuelle.question;
         reponseActuelle = questionActuelle.reponse;
         try{
@@ -85,8 +109,9 @@ function recupQuestionFacile(data){
 
         document.getElementById("QAS").style.display = 'block';
         document.getElementById("QCM").style.display = 'none';
+        document.getElementById("PAT").style.display = 'none';
     }
-    else if(questionActuelle.type == "PAT"){
+    else if(questionActuelle.type == "PAT"){//Question phrase a trou
         document.getElementById("questionQAS").innerHTML = questionActuelle.question;
         reponseActuelle = questionActuelle.reponse;
 
@@ -99,6 +124,7 @@ function recupQuestionFacile(data){
 
         document.getElementById("QAS").style.display = 'none';
         document.getElementById("QCM").style.display = 'none';
+        document.getElementById("PAT").style.display = 'block';
     }
 }
 
