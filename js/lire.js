@@ -27,7 +27,7 @@ let lireData = {
             {
                 "type":"PAT",
                 "nb" : "5",
-                "tab" : ["J'ai ", "VIDE", " (Manger) ta mère, c'était", "VIDE", "(Manger)"],
+                "tab" : ["J'ai ", "VIDE", " (Manger) ta mère, c'était", "VIDE", "(bon)"],
                 "reponse": ["mangé", "bon"]
             },
             {

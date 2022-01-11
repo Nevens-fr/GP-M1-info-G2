@@ -137,8 +137,8 @@ function recupQuestionFacile(data){
         }
 
         document.getElementById("QAS").style.display = 'none';
-        document.getElementById("QCM").style.display = 'block';
         document.getElementById("PAT").style.display = 'none';
+        document.getElementById("QCM").style.display = 'block';
     }
     else if(questionActuelle.type == "QAS"){//question avec saisie
         document.getElementById("questionQAS").innerHTML = questionActuelle.question;
@@ -150,10 +150,9 @@ function recupQuestionFacile(data){
             correctionActuelle = null;
         }
 
-
-        document.getElementById("QAS").style.display = 'block';
         document.getElementById("QCM").style.display = 'none';
         document.getElementById("PAT").style.display = 'none';
+        document.getElementById("QAS").style.display = 'block';
     }
     else if(questionActuelle.type == "PAT"){//Question phrase a trou
         document.getElementById("questionPAT").style.display = 'none';
