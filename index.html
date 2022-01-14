@@ -14,14 +14,25 @@
             
             <div class="spacer"></div>
 
-            <button class="btn-accueil" type="button" onclick="window.location='index.html'"> Accueil</button>
-            <button class="btn-lire" type="button" onclick="window.location='html/exerciceLire.html'"> <img class="boutonimage" src="images/lire.png" alt="Logo lecture"></button>
-            <button type="button" onclick="window.location='html/exerciceLire.html'"> Lire</button>
-            <button class="btn-ecrire" type="button" onclick="window.location='html/exerciceEcrire.html'"> <img class="boutonimage" src="images/ecrire.png" alt="Logo écriture"></button>
-            <button type="button" onclick="window.location='html/exerciceEcrire.html'"> Ecrire</button>
-            <button class="btn-compter" type="button" onclick="window.location='html/exerciceCompter.html'"> <img class="boutonimage" src="images/compter.png" alt="Logo Compter"></button>
-            <button type="button" onclick="window.location='html/exerciceCompter.html'"> Compter</button>
-
+            <div class="non-connect-btn">
+                <button class="btn-accueil" type="button" onclick="window.location='index.html'"> Accueil</button>
+                <button class="btn-lire" type="button" onclick="window.location='html/aideadomicile.html'"> Aide à domicile</button>
+                <button class="btn-lire" type="button" onclick="window.location='html/exerciceLire.html'"> <img class="boutonimage" src="images/lire.png" alt="Logo lecture"></button>
+                <button type="button" onclick="window.location='html/exerciceLire.html'"> Lire</button>
+                <button class="btn-ecrire" type="button" onclick="window.location='html/exerciceEcrire.html'"> <img class="boutonimage" src="images/ecrire.png" alt="Logo écriture"></button>
+                <button type="button" onclick="window.location='html/exerciceEcrire.html'"> Ecrire</button>
+                <button class="btn-compter" type="button" onclick="window.location='html/exerciceCompter.html'"> <img class="boutonimage" src="images/compter.png" alt="Logo Compter"></button>
+                <button type="button" onclick="window.location='html/exerciceCompter.html'"> Compter</button>
+            </div>
+            
+            <div class="connect-fields">
+                <p id="txt-login"> template</p>
+                <input type="text" id="input-login" name="name">
+                <button type="button" id="btn-login" onclick="recupConnection()">Se connecter</button>
+                <button type="button" id="btn-inscr" onclick="inscription()">S'inscrire</button>   
+                <button type="button" id="btn-unlogin" onclick="recupDeconnection()">Se deconnecter</button>   
+            </div>
+            
         </div>
 
         <div class="main">
@@ -35,6 +46,11 @@
              et compter <img class="boutonimage" src="images/compter.png" alt="Logo Compter">
              en répondant à différentes questions avec une difficulté variable.
             </p>
-    </div>
+
+        </div>
     </body>
+
+    <script defer type="text/javascript" src="./js/compte.js"></script>
+
+
 </DOCTYPE>

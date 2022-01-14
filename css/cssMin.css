@@ -61,12 +61,40 @@ body{
     font-weight: 600;
 }
 
+.non-connect-btn{
+    position:absolute;
+    left: 15%;
+    height: 40px;
+    display: flex;
+}
+
 .btn-accueil{
     margin: 3% 3%;
 }
 
 .btn-lire,.btn-ecrire, .btn-compter{
-  margin-left: 3%;
+    margin-left: 10%;
+  }
+
+.connect-fields{
+    position:absolute;
+    left: 60%;
+    height: 40px;
+    display: flex;
+}
+
+#txt-login{
+    margin-right: 3%;
+    font-size: 14px;
+}
+#input-login{
+    margin-right: 3%;
+}
+#btn-login{
+    margin-right: 3%;
+}
+#btn-unlogin{
+    margin-left: 2%;
 }
 
 /* Page exerciceLire.html */

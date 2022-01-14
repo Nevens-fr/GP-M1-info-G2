@@ -2,7 +2,7 @@
 
     <head>
         <meta charset = "UTF-8">
-        <title>Exercice de calcul</title>
+        <title>Exercice de lecture pour les aides à domicile</title>
         <link rel="stylesheet" href="../css/cssMin.css">        
     </head>
 
@@ -14,14 +14,11 @@
             <div class="spacer"></div>
 
             <div class="non-connect-btn">
-                <button class="btn-accueil" type="button" onclick="window.location='index.html'"> Accueil</button>
+                <button class="btn-accueil" type="button" onclick="window.location='../index.html'"> Accueil</button>
                 <button class="btn-lire" type="button" onclick="window.location='html/aideadomicile.html'"> Aide à domicile</button>
-                <button class="btn-lire" type="button" onclick="window.location='html/exerciceLire.html'"> <img class="boutonimage" src="images/lire.png" alt="Logo lecture"></button>
-                <button type="button" onclick="window.location='html/exerciceLire.html'"> Lire</button>
-                <button class="btn-ecrire" type="button" onclick="window.location='html/exerciceEcrire.html'"> <img class="boutonimage" src="images/ecrire.png" alt="Logo écriture"></button>
-                <button type="button" onclick="window.location='html/exerciceEcrire.html'"> Ecrire</button>
-                <button class="btn-compter" type="button" onclick="window.location='html/exerciceCompter.html'"> <img class="boutonimage" src="images/compter.png" alt="Logo Compter"></button>
-                <button type="button" onclick="window.location='html/exerciceCompter.html'"> Compter</button>
+                <button class="btn-lire" type="button" onclick="window.location='exerciceLireAD.html'"> Lire</button>
+                <button class="btn-ecrire" type="button" onclick="window.location='exerciceEcrireAD.html'"> Ecrire</button>
+                <button class="btn-compter" type="button" onclick="window.location='exerciceCompterAD.html'"> Compter</button>
             </div>
 
             <div class="connect-fields">
@@ -34,7 +31,7 @@
         </div>
 
         <div class="diff" id="diff">
-            <p class="txt-diff">Choisissez la difficulté de votre exercice de calcul</p>
+            <p class="txt-diff">Choisissez la difficulté de votre exercice de Lecture pour aide à domicile</p>
             
             <div class="btn-diff">
                 <button class="btn-facile" type="button" onclick="afficheQFacile()"> Facile</button>
@@ -45,7 +42,7 @@
 
         <!--Affichage d'un div pour un exercice de type question avec saisie-->
         <div class="main" id="QAS">
-            <h1 class="titreMain">Exercice de calcul</h1>
+            <h1 class="titreMain">Exercice de lecture</h1>
             <p id="questionQAS" class="p1Main">
                 template question.
             </p>
@@ -60,7 +57,7 @@
 
         <!--Affichage d'un div pour un exercice de type phrase à trou-->
         <div class="main" id="PAT">
-            <h1 class="titreMain">Exercice de calcul</h1>
+            <h1 class="titreMain">Exercice de lecture pour aide à domicile</h1>
             <p id="questionPAT" class="p1Main">
                 template question.
             </p>
@@ -73,7 +70,7 @@
         
         <!--Affichage d'un div pour un exercice de type QCM-->
         <div class="main" id="QCM">
-            <h1 class="titreMain">Exercice de calcul</h1>
+            <h1 class="titreMain">Exercice de lecture pour aide à domicile</h1>
             <p id="questionQCM" class="p1Main">
                 template question.
             </p>
@@ -84,7 +81,6 @@
         </div>
     </body>
 
-    <script defer type="text/javascript" src="../js/jsCompter.js"></script>
-    <script defer type="text/javascript" src="./js/compte.js"></script>
+    <script defer type="text/javascript" src="../js/jsLireAD.js"></script>
 
 </DOCTYPE>

@@ -9,7 +9,7 @@ var inputPAT = [];
 var nbInputPAT;
 var reponsePAT = [];
 
-var url = "https://api.jsonstorage.net/v1/json/dbd8db9f-dab7-4d6f-8dab-d750b4f73208"
+var url = "https://api.jsonstorage.net/v1/json/3e028358-c05c-452d-ab90-2ad6669f5ed2"
 
 var lireData;
 var xmlHttp;
@@ -18,7 +18,7 @@ var methodeAAppeler;
 
 var pts = 0;
 var qeffec = 0;
-
+var numQ;
 
 
 
@@ -119,7 +119,9 @@ function isTrueQCM(){
 Choix d'une question au hasard parmi le pool de questions moyennes
 */
 function recupQuestionMoyennes(data){
-    questionActuelle = data.moyen[Math.floor(Math.random()*data.moyen.length)];
+    var num = Math.floor(Math.random()*data.moyen.length)
+    numQ = num
+    questionActuelle = data.moyen[num];
     difficulte = 1
     question()
 }
@@ -129,7 +131,9 @@ Choix d'une question au hasard parmi le pool de questions difficiles
 */
 function recupQuestionDifficiles(data){
     difficulte = 2
-    questionActuelle = data.difficile[Math.floor(Math.random()*data.difficile.length)];
+    var num = Math.floor(Math.random()*data.difficile.length)
+    numQ = num
+    questionActuelle = data.difficile[num];
     question()
 }
 
@@ -138,7 +142,9 @@ Choix d'une question au hasard parmi le pool de questions faciles
 */
 function recupQuestionFacile(data){
     difficulte = 0
-    questionActuelle = data.facile[Math.floor(Math.random()*data.facile.length)];
+    var num = Math.floor(Math.random()*data.facile.length)
+    numQ = num
+    questionActuelle = data.facile[num];
     question()
 }
 
@@ -201,6 +207,7 @@ function question(){
     }
     else if(questionActuelle.type == "QAS"){//question avec saisie
         document.getElementById("questionQAS").innerHTML = questionActuelle.question;
+        document.getElementById("reponseQAS").innerHTML = " "
         reponseActuelle = questionActuelle.reponse;
         try{
             correctionActuelle = questionActuelle.correction;
@@ -220,6 +227,16 @@ function question(){
         var nb = Number(questionActuelle.nb);
 
         nbInputPAT = 0;
+        inputPAT = []
+
+        try{
+            document.getElementById("idPATDiv").parentNode.removeChild(document.getElementById("idPATDiv"))
+        }
+        catch{        }
+
+        let div = document.createElement('div');
+        //div.classList.add('radioMain');
+        div.setAttribute("id", "idPATDiv")
 
         for(var i = 0; i < nb; i++){
 
@@ -239,10 +256,10 @@ function question(){
                 elem.innerHTML = questionActuelle.tab[i];
                 elem.setAttribute('class', "textQAS");
             }
-
-            var prev = document.getElementById("boutonPAT");
-            document.getElementById('PAT').insertBefore(elem, prev);
+            div.appendChild(elem)
         }
+        var prev = document.getElementById("boutonPAT");
+        document.getElementById('PAT').insertBefore(div, prev);
 
         try{
             correctionActuelle = questionActuelle.correction;
@@ -322,17 +339,24 @@ function suivant(){
     }
     catch{}
 
+    reponseActuelle = null
+    qcmChecked = []
+    qcmPossibilites = [];
+    reponsePAT = [];
+    inputPAT = [];
+
+
 
     if(difficulte == 0){
-        delete lireData.facile[questionActuelle]
+        delete lireData.facile[numQ]
         recupQuestionFacile(lireData)
     }
     else if(difficulte == 1){
-        delete lireData.moyen[questionActuelle]
+        delete lireData.moyen[numQ]
         recupQuestionMoyennes(lireData)
     }
     else{
-        delete lireData.difficile[questionActuelle]
+        delete lireData.difficile[numQ]
         recupQuestionDifficiles(lireData)
     }
 }

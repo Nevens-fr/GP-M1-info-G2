@@ -9,7 +9,7 @@ var inputPAT = [];
 var nbInputPAT;
 var reponsePAT = [];
 
-var url = "https://api.jsonstorage.net/v1/json/65b80889-f2e6-4857-8249-37311dfee949"
+var url = "hhttps://api.jsonstorage.net/v1/json/537ea1fb-838c-47c2-927a-f64fcb392dee"
 
 var lireData;
 var xmlHttp;
@@ -19,7 +19,6 @@ var methodeAAppeler;
 var pts = 0;
 var qeffec = 0;
 var numQ;
-
 
 
 
@@ -228,9 +227,10 @@ function question(){
         var nb = Number(questionActuelle.nb);
 
         nbInputPAT = 0;
+        inputPAT = []
 
         try{
-            document.getElementById("idPATDiv" ).parentNode.removeChild(document.getElementById("idPATDiv"))
+            document.getElementById("idPATDiv").parentNode.removeChild(document.getElementById("idPATDiv"))
         }
         catch{        }
 

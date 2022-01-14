@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+
+    <head>
+        <meta charset = "UTF-8">
+        <title>Home page</title>
+        <link rel="stylesheet" href="css/cssMin.css">
+    </head>
+
+    <body>
+
+        <div class="navbar">
+            <a class="title" href="index.html" > Notre site web </a>
+            
+            <div class="spacer"></div>
+
+            <div class="non-connect-btn">
+                <button class="btn-accueil" type="button" onclick="window.location='index.html'"> Accueil</button>
+                <button class="btn-lire" type="button" onclick="window.location='html/exerciceLireAD.html'"> <img class="boutonimage" src="images/lire.png" alt="Logo lecture"></button>
+                <button type="button" onclick="window.location='html/exerciceLireAD.html'"> Lire aide à domicile</button>
+                <button class="btn-ecrire" type="button" onclick="window.location='html/exerciceEcrireAD.html'"> <img class="boutonimage" src="images/ecrire.png" alt="Logo écriture"></button>
+                <button type="button" onclick="window.location='html/exerciceEcrireAD.html'"> Ecrire aide à domicile</button>
+                <button class="btn-compter" type="button" onclick="window.location='html/exerciceCompterAD.html'"> <img class="boutonimage" src="images/compter.png" alt="Logo Compter"></button>
+                <button type="button" onclick="window.location='html/exerciceCompterAD.html'"> Lecture aide à domicile</button>
+            </div>
+            
+            <div class="connect-fields">
+                <p id="txt-login"> template</p>
+                <input type="text" id="input-login" name="name">
+                <button type="button" id="btn-login" onclick="recupConnection()">Se connecter</button>
+                <button type="button" id="btn-inscr" onclick="inscription()">S'inscrire</button>    
+            </div>
+            
+        </div>
+
+        <div class="main">
+            <p class="p1Main"></p>
+            <p class="titreMain"> Aide à domicile </p>
+            <p class="text">
+            Vous êtes ici dans la section aide à domicile. Vous avez des exercices pour devenir aide à domicile.
+            </p>
+
+        </div>
+    </body>
+
+    <script defer type="text/javascript" src="./js/compte.js"></script>
+
+
+</DOCTYPE>
