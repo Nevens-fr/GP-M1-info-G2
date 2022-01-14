@@ -13,7 +13,8 @@ var url = "https://api.jsonstorage.net/v1/json/954cc290-ed90-4f21-b835-8dc85cd0b
 
 var lireData;
 var xmlHttp;
-var difficulte
+var difficulte;
+var methodeAAppeler;
 
 
 
@@ -298,6 +299,10 @@ function suivant(){
     document.getElementById("boutonSuivantQAS").style.display = 'none';
     document.getElementById("boutonSuivantQCM").style.display = 'none';
     document.getElementById("boutonSuivantPAT").style.display = 'none';
+    document.getElementById("reponseQCMreponseQCM").innerHTML = ""
+    document.getElementById("reponseQAS").innerHTML = ""
+    document.getElementById("reponsePAT").innerHTML = ""
+
 
     if(difficulte == 0){
         delete lireData.facile[questionActuelle]
@@ -312,7 +317,5 @@ function suivant(){
         recupQuestionDifficiles(lireData)
     }
 }
-
-var methodeAAppeler = recupQuestionMoyennes
 
 window.onload = httpGet(lireData);

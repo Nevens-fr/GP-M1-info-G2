@@ -61,8 +61,12 @@ body{
     font-weight: 600;
 }
 
-.btn-accueil, .btn-lire,.tn-ecrre, .btn-compter{
+.btn-accueil{
     margin: 3% 3%;
+}
+
+.btn-lire,.btn-ecrire, .btn-compter{
+  margin-left: 3%;
 }
 
 /* Page exerciceLire.html */
@@ -93,8 +97,10 @@ body{
 
 .picture {
     width: 250px;
-    text-align: center;
+    margin-left: 37%;
+    margin-top:2%;
 }
+
 
 .boutonimage{
     width: 25px;
