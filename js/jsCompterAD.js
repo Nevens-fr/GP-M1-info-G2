@@ -9,7 +9,7 @@ var inputPAT = [];
 var nbInputPAT;
 var reponsePAT = [];
 
-var url = "hhttps://api.jsonstorage.net/v1/json/537ea1fb-838c-47c2-927a-f64fcb392dee"
+var url = "https://api.jsonstorage.net/v1/json/537ea1fb-838c-47c2-927a-f64fcb392dee"
 
 var lireData;
 var xmlHttp;
