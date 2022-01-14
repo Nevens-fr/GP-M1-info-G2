@@ -93,6 +93,7 @@ function inscription(){
         "notesEcriture" : ["0", "0", "0"],
         "notesCompter" : ["0", "0", "0"],
     })
+    console.log(d)
     var data = JSON.stringify(lireData) //en string
 
     xmlHttp = new XMLHttpRequest();
@@ -106,7 +107,7 @@ function inscription(){
 //récup data de la modif de json
 function checkDataCreate(){ // pas besoin de get l'url, elle reste la mm
     if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
-        Location.reload()
+        location.reload()
     }
 }
 
