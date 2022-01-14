@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset = "UTF-8">
+        <title>Exercice d'écriture</title>
+        <link rel="stylesheet" href="../css/cssMin.css">        
+    </head>
+
+    <body>
+
+        <div class="navbar">
+            <a class="title" href="../index.html" > Notre site web </a>
+            
+            <div class="spacer"></div>
+
+            <button class="btn-accueil" type="button" onclick="window.location='../index.html'"> Accueil</button>
+            <button class="btn-lire" type="button" onclick="window.location='exerciceLire.html'"> Lire</button>
+            <button class="btn-ecrire" type="button" onclick="window.location='exerciceEcrire.html'"> Ecrire</button>
+            <button class="btn-compter" type="button" onclick="window.location='exerciceCompter.html'"> Compter</button>
+
+        </div>
+
+        <div class="diff" id="diff">
+            <p class="txt-diff">Choisissez la difficulté de votre exercice d'écriture</p>
+            
+            <div class="btn-diff">
+                <button class="btn-facile" type="button" onclick="afficheQFacile()"> Facile</button>
+                <button class="btn-moyen" type="button" onclick="afficheQMoyen()"> Moyen</button>
+                <button class="btn-difficile" type="button" onclick="afficheQDiff()"> Difficile</button>
+            </div>
+        </div>
+
+        <!--Affichage d'un div pour un exercice de type question avec saisie-->
+        <div class="main" id="QAS">
+            <h1 class="titreMain">Exercice d'écriture</h1>
+            <p id="questionQAS" class="p1Main">
+                template question.
+            </p>
+
+            <input type="text" class="textQAS" id="idTextQAS">
+
+            <input type="button" onclick="isTrueQAS()" class="boutonVerif" value="Vérifier"></button> 
+            <input type="button" id="boutonSuivantQAS" onclick="suivant()" class="boutonSuivant" value="Suivante"></button> 
+
+            <p id="reponseQAS" class="p2Main"></br></p>
+        </div>
+
+        <!--Affichage d'un div pour un exercice de type phrase à trou-->
+        <div class="main" id="PAT">
+            <h1 class="titreMain">Exercice d'écriture</h1>
+            <p id="questionPAT" class="p1Main">
+                template question.
+            </p>
+
+
+            <input type="button" id="boutonPAT" onclick="isTruePAT()" class="boutonVerif" value="Vérifier"></button> 
+            <input type="button" id="boutonSuivantPAT" onclick="suivant()" class="boutonSuivant" value="Suivante"></button> 
+            <p id="reponsePAT" class="p2Main"></br></p>
+        </div>
+        
+        <!--Affichage d'un div pour un exercice de type QCM-->
+        <div class="main" id="QCM">
+            <h1 class="titreMain">Exercice d'écriture</h1>
+            <p id="questionQCM" class="p1Main">
+                template question.
+            </p>
+            <input type="button" id="boutonQCM" onclick="isTrueQCM()" class="boutonVerif" value="Vérifier"></button> 
+            <input type="button" id="boutonSuivantQCM" onclick="suivant()" class="boutonSuivant" value="Suivante"></button> 
+
+            <p id="reponseQCM" class="p2Main"></br></p>
+        </div>
+    </body>
+
+    <script defer type="text/javascript" src="../js/jsEcrire.js"></script>
+
+</DOCTYPE>
