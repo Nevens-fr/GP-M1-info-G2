@@ -32,38 +32,41 @@
 
         <!--Affichage d'un div pour un exercice de type question avec saisie-->
         <div class="main" id="QAS">
-            <h1 class="titreMain">Exercice</h1>
+            <h1 class="titreMain">Exercice de lecture</h1>
             <p id="questionQAS" class="p1Main">
                 template question.
             </p>
 
             <input type="text" class="textQAS" id="idTextQAS">
 
-
             <input type="button" onclick="isTrueQAS()" class="boutonVerif" value="Vérifier"></button> 
+            <input type="button" id="boutonSuivantQAS" onclick="suivant()" class="boutonSuivant" value="Suivante"></button> 
+
             <p id="reponseQAS" class="p2Main"></br></p>
         </div>
 
         <!--Affichage d'un div pour un exercice de type phrase à trou-->
         <div class="main" id="PAT">
-            <h1 class="titreMain">Exercice</h1>
+            <h1 class="titreMain">Exercice de lecture</h1>
             <p id="questionPAT" class="p1Main">
                 template question.
             </p>
 
 
             <input type="button" id="boutonPAT" onclick="isTruePAT()" class="boutonVerif" value="Vérifier"></button> 
-            <input type="button" id="boutonSuivant" onclick="suivant()" class="boutonVerif" value="Suivante"></button> 
+            <input type="button" id="boutonSuivantPAT" onclick="suivant()" class="boutonSuivant" value="Suivante"></button> 
             <p id="reponsePAT" class="p2Main"></br></p>
         </div>
         
         <!--Affichage d'un div pour un exercice de type QCM-->
         <div class="main" id="QCM">
-            <h1 class="titreMain">Exercice</h1>
+            <h1 class="titreMain">Exercice de lecture</h1>
             <p id="questionQCM" class="p1Main">
                 template question.
             </p>
             <input type="button" id="boutonQCM" onclick="isTrueQCM()" class="boutonVerif" value="Vérifier"></button> 
+            <input type="button" id="boutonSuivantQCM" onclick="suivant()" class="boutonSuivant" value="Suivante"></button> 
+
             <p id="reponseQCM" class="p2Main"></br></p>
         </div>
     </body>

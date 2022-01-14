@@ -44,6 +44,86 @@ let lireData = {
         ],
     }
 
-let aideDomicileData = {
-
-}
+//Variable contenant les questions concernant les calcus pour l'aide à domicile
+let aideDomicileCalculData = {
+    "facile": [
+            {
+                "type":"QCM",
+                "question": "Lilie a 7 euros dans sa tirelire, sa grand-mère lui donne 6 euros. Combien d'argent a désormais Lilie dans sa tirelire ?",
+                "possibilite" : ["13", "14", "15"],
+                "nbPoss" : "3",
+                "reponse": "13",
+                "correction" : "Il faut calculer 7 + 6 . Le total est 13." 
+            },
+            {
+                "type":"QCM",
+                "question": "La maman de Jessica entre dans un supermarché avec 25 euros dans son porte-monnaie. Elle dépense 17 euros. Combien d'argent lui reste-t-il ? ",
+                "possibilite" : ["7", "8", "10"],
+                "nbPoss" : "3",
+                "reponse": "8",
+                "correction" : "Il faut calculer la différence entre 25 et 17. Il faut calculer 25-17. Il reste 8 € à la maman de Jessica." 
+            },
+            {
+                "type":"QCM",
+                "question": "Laure possède 35 euros. Une place de cinéma coûte 5 euros. Elle voudrait aller 7 fois au cinéma cette semaine. Aura-t-elle assez d'argent ?",
+                "possibilite" : ["oui", "non"],
+                "nbPoss" : "2",
+                "reponse": "oui",
+                "correction" : "5*7 = 35" 
+            },
+            {
+                "type":"QAS",
+                "question": "Le papa d'Antoine entre dans un supermarché avec 50 euros. Il achète 2 livres à 11 euros chacun et 2 cassettes vidéo à 12 euros chacune. Il donne à la caissière son billet de 50 euros, combien la caissière doit-elle lui rendre ?",
+                "reponse": "4",
+                "correction" : "2*11 (22) + 2*12 (24) = 46. Il reste 50-46 = 4" 
+            }
+        ],
+    "moyen": [
+            {
+                "type":"QCM",
+                "question": "Laure se rend à la boulangerie. Elle a un billet de 20 euros. A la fin, la boulangère lui rend 7€50. Combien Laure a-t-elle dépensée ?",
+                "possibilite" : ["8,50€", "10,50€", "12,50€"],
+                "nbPoss" : "3",
+                "reponse": "12,50€",
+                "correction" : "20 - 7,50 = 12,50€" 
+            },
+            {
+                "type":"QAS",
+                "question": "Benoît rentre dans un magasin de jouet avec un billet de 20 euros. Il veut acheter une peluche qui coûte 16,25€. Combien le caissier va-t-il lui rendre ?",
+                "reponse": "3,75",
+                "correction" : "20 - 16,25 = 3,75" 
+            },
+            {
+                "type":"QCM",
+                "question": "Etienne posséde 1 billet de 20€, 2 billet de 10€ et 1 billet de 5€. Pourra-t-il acheter une chaise qui coûte 46€ ?",
+                "possibilite" : ["oui", "non"],
+                "nbPoss" : "2",
+                "reponse": "non",
+                "correction" : "20+10+10+5 = 45. Il manque donc 1€ à Etienne pour acheter la chaise." 
+            }
+        ],
+    "difficile": [
+            {
+                "type":"QCM",
+                "question": "Laure se rend à la boulangerie. Elle a un billet de 20 euros. A la fin, la boulangère lui rend 7€50. Combien Laure a-t-elle dépensée ?",
+                "possibilite" : ["8,50€", "10,50€", "12,50€"],
+                "nbPoss" : "3",
+                "reponse": "12,50€",
+                "correction" : "20 - 7,50 = 12,50€" 
+            },
+            {
+                "type":"QAS",
+                "question": "Benoît rentre dans un magasin de jouet avec un billet de 20 euros. Il veut acheter une peluche qui coûte 16,25€. Combien le caissier va-t-il lui rendre ?",
+                "reponse": "3,75",
+                "correction" : "20 - 16,25 = 3,75" 
+            },
+            {
+                "type":"QCM",
+                "question": "Etienne posséde 1 billet de 20€, 2 billet de 10€ et 1 billet de 5€. Pourra-t-il acheter une chaise qui coûte 46€ ?",
+                "possibilite" : ["oui", "non"],
+                "nbPoss" : "2",
+                "reponse": "non",
+                "correction" : "20+10+10+5 = 45. Il manque donc 1€ à Etienne pour acheter la chaise." 
+            }
+        ] 
+    }
