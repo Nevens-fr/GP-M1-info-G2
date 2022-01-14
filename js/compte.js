@@ -85,10 +85,10 @@ function recupDeconnection(){
 }
 
 function inscription(){
-    var d = document.getElementById("input-login").innerHTML
-    d = JSON.stringify(d)
+    var d = document.getElementById("input-login").innerText;
+    //d = JSON.stringify(d)x
     lireData.users.push({
-        "name" : d.valueOf(),
+        "name" : d,
         "notesLecture" : ["0", "0", "0"],
         "notesEcriture" : ["0", "0", "0"],
         "notesCompter" : ["0", "0", "0"],
