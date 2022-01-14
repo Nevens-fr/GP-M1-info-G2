@@ -85,7 +85,7 @@ function recupDeconnection(){
 }
 
 function inscription(){
-    var d = document.getElementById("input-login").innerText;
+    var d = document.getElementById('input-login').value;
     //d = JSON.stringify(d)x
     lireData.users.push({
         "name" : d,
