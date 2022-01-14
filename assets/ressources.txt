@@ -1,0 +1,6 @@
+ecriture
+https://api.jsonstorage.net/v1/json/6cbd79d0-5a9f-4dff-a7a5-59d16d406e7d
+lecture
+https://api.jsonstorage.net/v1/json/954cc290-ed90-4f21-b835-8dc85cd0bf94
+compter
+https://api.jsonstorage.net/v1/json/dbd8db9f-dab7-4d6f-8dab-d750b4f73208
