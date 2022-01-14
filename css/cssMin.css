@@ -1,3 +1,4 @@
+/* Page index.html */
 body{
     background-color: #c7c7c7;
 }
@@ -38,6 +39,7 @@ body{
     color:black;
 }
 
+/*Barre de navigation*/
 .spacer{
     flex: 1;
 }
@@ -58,3 +60,25 @@ body{
 .btn-accueil, .btn-lire,.tn-ecrre, .btn-compter{
     margin: 3% 3%;
 }
+
+/* Page exerciceLire.html */
+
+.diff{
+    background-color: white;
+    margin-top: 80px;
+    margin-left: 15%;
+    width: 70%;
+    height: 70%;
+}
+
+.btn-diff{
+    margin: 3% 40%;
+}
+.txt-diff{
+    margin: 3% 33%;
+}
+
+.btn-facile, .btn-moyen, .btn-difficile{
+    margin-left: 3%;
+}
+

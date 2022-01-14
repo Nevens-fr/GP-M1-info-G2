@@ -458,8 +458,25 @@ function checkData(){
         lireData = JSON.parse(xmlHttp.response);//parsing en json
         premierPassage = false
         console.log(lireData)
-        methodeAAppeler(lireData);
     }
+}
+
+function afficheQDiff(){
+    document.getElementById("diff").style.display = 'none';
+    methodeAAppeler = recupQuestionDifficiles
+    methodeAAppeler(lireData)
+}
+
+function afficheQMoyen(){
+    document.getElementById("diff").style.display = 'none';
+    methodeAAppeler = recupQuestionMoyennes
+    methodeAAppeler(lireData)
+}
+
+function afficheQFacile(){
+    document.getElementById("diff").style.display = 'none';
+    methodeAAppeler = recupQuestionFacile
+    methodeAAppeler(lireData)
 }
 
 var methodeAAppeler = recupQuestionMoyennes

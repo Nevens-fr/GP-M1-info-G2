@@ -13,10 +13,21 @@
             
             <div class="spacer"></div>
 
-            <button class="btn-accueil" type="button"> Accueil</button>
-            <button class="btn-lire" type="button"> Lire</button>
-            <button class="btn-ecrire" type="button"> Ecrire</button>
-            <button class="btn-compter" type="button"> Compter</button>
+            <button class="btn-accueil" type="button" onclick="window.location='../index.html'"> Accueil</button>
+            <button class="btn-lire" type="button" onclick="window.location='exerciceLire.html'"> Lire</button>
+            <button class="btn-ecrire" type="button" onclick="window.location='exerciceEcrire.html'"> Ecrire</button>
+            <button class="btn-compter" type="button" onclick="window.location='exerciceCompter.html'"> Compter</button>
+
+        </div>
+
+        <div class="diff" id="diff">
+            <p class="txt-diff">Choisissez la difficulté de votre exercice de Lecture</p>
+            
+            <div class="btn-diff">
+                <button class="btn-facile" type="button" onclick="afficheQFacile()"> Facile</button>
+                <button class="btn-moyen" type="button" onclick="afficheQMoyen()"> Moyen</button>
+                <button class="btn-difficile" type="button" onclick="afficheQDiff()"> Difficile</button>
+            </div>
 
         </div>
 
