@@ -45,5 +45,5 @@ let lireData = {
     }
 
 let aideDomicileData = {
-    
+
 }

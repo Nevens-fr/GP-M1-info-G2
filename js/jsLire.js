@@ -14,7 +14,6 @@ var url = "https://api.jsonstorage.net/v1/json/954cc290-ed90-4f21-b835-8dc85cd0b
 var lireData;
 var xmlHttp;
 
-var premierPassage = true
 
 
 
@@ -102,10 +101,6 @@ Choix d'une question au hasard parmi le pool de questions faciles
 */
 function recupQuestionFacile(data){
 
-    if(premierPassage){
-        httpGet()
-        return 0
-    }
 
     questionActuelle = data.facile[Math.floor(Math.random()*data.facile.length)];
 
@@ -216,10 +211,6 @@ Choix d'une question au hasard parmi le pool de questions moyennes
 */
 function recupQuestionMoyennes(data){
 
-    if(premierPassage){
-        httpGet()
-        return 0
-    }
 
     questionActuelle = data.moyen[Math.floor(Math.random()*data.moyen.length)];
 
@@ -324,6 +315,8 @@ function recupQuestionMoyennes(data){
         document.getElementById("PAT").style.display = 'block';
     }
 }
+
+function tirageQuestionDiff(){}
 
 /*
 Choix d'une question au hasard parmi le pool de questions difficiles
@@ -456,7 +449,6 @@ function httpGet(){
 function checkData(){
     if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
         lireData = JSON.parse(xmlHttp.response);//parsing en json
-        premierPassage = false
         console.log(lireData)
     }
 }
@@ -477,6 +469,10 @@ function afficheQFacile(){
     document.getElementById("diff").style.display = 'none';
     methodeAAppeler = recupQuestionFacile
     methodeAAppeler(lireData)
+}
+
+function suivant(){
+
 }
 
 var methodeAAppeler = recupQuestionMoyennes
