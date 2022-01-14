@@ -447,6 +447,10 @@ function httpGet(){
     xmlHttp.setRequestHeader('Content-Type', "application/json; charset=UTF-8");
     xmlHttp.send( null );
     xmlHttp.onreadystatechange = checkData;
+
+    document.getElementById("QAS").style.display = 'none';
+    document.getElementById("QCM").style.display = 'none';
+    document.getElementById("PAT").style.display = 'none';
 }
 //Utilisation des datas
 function checkData(){
@@ -460,4 +464,4 @@ function checkData(){
 
 var methodeAAppeler = recupQuestionMoyennes
 
-window.onload = methodeAAppeler(lireData);
+window.onload = httpGet(lireData);
